@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="writeText"
+            type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+
+        <ImageView
+            android:id="@+id/izabalView"
+            android:layout_width="0dp"
+            android:layout_height="214dp"
+            android:contentDescription="@string/imagenGuate"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/riodulce" />
+
+        <ImageButton
+            android:id="@+id/starButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="188dp"
+            android:onClick="changeText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.923"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:drawable/star_big_on"
+            android:contentDescription="@string/star" />
+
+        <TextView
+            android:id="@+id/nameView"
+            style="@style/textButtStyle"
+            android:fontFamily="@font/roboto"
+            android:text="@string/nombre"
+            app:layout_constraintBottom_toBottomOf="@+id/changeName"
+            app:layout_constraintEnd_toEndOf="@+id/newContent"
+            app:layout_constraintHorizontal_bias="0.88"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/changeName"
+            tools:visibility="visible" />
+
+        <EditText
+            android:id="@+id/changeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/your_name"
+            android:inputType="textPersonName"
+            android:text="@{writeText}"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@+id/buttonJutiapa"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.36"
+            app:layout_constraintStart_toEndOf="@+id/nameView"
+            app:layout_constraintTop_toBottomOf="@+id/izabalView"
+            app:layout_constraintVertical_bias="0.495"
+            tools:ignore="Autofill"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/newContent"
+            style="@style/textButtStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/buttonJutiapa"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/izabalView" />
+
+        <Button
+            android:id="@+id/buttonChiquimula"
+            android:text="@string/chiquimulaText"
+            android:onClick="changeActivity"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/buttonJutiapa"
+            style="@style/buttomStyle" />
+
+        <Button
+            android:id="@+id/buttonJutiapa"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/jutiapaText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/buttonChiquimula"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/buttonQuiche"
+            style="@style/buttomStyle"/>
+
+        <Button
+            android:id="@+id/buttonQuiche"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/quicheText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/buttonJutiapa"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/buttomStyle"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

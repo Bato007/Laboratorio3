@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Laboratorio3</string>
+    <string name="quicheText">Quiché</string>
+    <string name="jutiapaText">Jutiapa</string>
+    <string name="chiquimulaText">Chiquimula</string>
+    <string name="imagenGuate">Rio Dulce</string>
+    <string name="nombre">Nombre</string>
+    <string name="star">star</string>
+    <string name="your_name">Your Name</string>
+    <string name="comment">Comment</string>
+    <string name="commentary">Commentary:</string>
+    <string name="commentary2">Commentary</string>
+</resources>

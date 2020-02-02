@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin">50dp</dimen>
+    <dimen name="constraintLayout" />
+    <dimen name="constraint_Layout">16dp</dimen>
+</resources>
